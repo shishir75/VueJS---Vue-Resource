@@ -10,9 +10,9 @@
           </div>
           <div class="form-group">
             <label>Email</label>
-            <input type="text" class="form-control" v-model="user.email">
+            <input type="email" class="form-control" v-model="user.email">
           </div>
-          <button class="btn btn-info">Submit</button>
+          <button class="btn btn-info" @click.prevent="submit">Submit</button>
         </form>
       </div>
     </div>
@@ -32,6 +32,11 @@
           email: ''
         }
       };
+    },
+    methods: {
+      submit() {
+        console.log(this.user);
+      }
     }
 
   }
